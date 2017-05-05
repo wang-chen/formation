@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <node pkg="rosbag" type="play" name = "imu_uwb_bag" output="screen" args="-l $(find formation)/launch/dis_imu_vicon_2015-09-07-17-47-56.bag">
+        </node>
+    
+    <node name="broadcaster" pkg="formation" type="formationfilter.py" respawn="false" output="screen" >
+    </node>
+ 
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false">
+    </node>
+
+<!--
+
+	<node pkg="camera" type="recorder" name="recorder" output="screen" if="$(arg record_flag)">
+             <param name="/database" value="$(find camera)/database/"/>
+	</node>
+-->
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <node pkg="rosbag" type="record" name = "imu_uwb_bag" output="screen" args="-o $(find formation)/launch/dis_imu_vicon -a">
+        </node>
+
+<!--
+
+	<node pkg="camera" type="recorder" name="recorder" output="screen" if="$(arg record_flag)">
+             <param name="/database" value="$(find camera)/database/"/>
+	</node>
+-->
+</launch>

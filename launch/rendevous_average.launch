@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<launch>
+   <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_with_cam.gazebo.xacro" />
+
+   <include file="$(find hector_gazebo_worlds)/launch/rolling_landscape_120m.launch"/>
+   
+   <group ns="uav0">
+      <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch" >
+        <arg name="name" value="uav0" />
+        <arg name="tf_prefix" value="uav0" />
+        <arg name="model" value="$(arg model)"/> 
+        <arg name="x" value="6.0" />
+        <arg name="y" value="-3" />
+      </include>
+      <node name="controller" pkg="formation" type="rendezvous_controller.py" respawn="false" output="screen"
+            args="uav0">
+      </node>
+      <node name="rendezvous" pkg="formation" type="rendezvous_node" respawn="false" output="screen">
+      </node>
+    </group>
+
+   <group ns="uav1">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav1" />
+       <arg name="tf_prefix" value="uav1" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="-4.0" />
+     </include>
+      <node name="controller" pkg="formation" type="rendezvous_controller.py" respawn="false" output="screen"
+            args="uav1">
+      </node>
+      <node name="rendezvous" pkg="formation" type="rendezvous_node" respawn="false" output="screen">
+      </node>
+   </group>
+
+   <group ns="uav2">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav2" />
+       <arg name="tf_prefix" value="uav2" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="3.0" />
+     </include>
+      <node name="controller" pkg="formation" type="rendezvous_controller.py" respawn="false" output="screen"
+            args="uav2">
+      </node>
+      <node name="rendezvous" pkg="formation" type="rendezvous_node" respawn="false" output="screen">
+      </node>
+   </group>
+   
+   <group ns="target">
+      <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch" >
+        <arg name="name" value="target" />
+        <arg name="tf_prefix" value="target" />
+        <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro"/>
+        <arg name="x" value="2.0" />
+        <arg name="y" value="0.0" />
+      </include>
+      <include file="$(find hector_quadrotor_teleop)/launch/xbox_controller.launch"/>
+   </group>
+ 
+   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find formation)/rviz/multiquadcopter.rviz">
+   </node>
+
+
+</launch>
