@@ -4,4 +4,4 @@ A ROS package for multi-agent formation/rendezvous
 
 ### Acknowledgement
 
-   [Chen Wang](https://wang-chen.github.io), [Ting Zhang](http://isc.bit.edu.cn/schools/automation/knowingprofessors2/113009.htm), [Kai Wang](https://scholar.google.com/citations?user=hi93q_8AAAAJ&hl=en), Shuaiyi Lv, [Hongbin Ma](http://mathmhb.sourceforge.net), "[A new approach of multi-robot cooperative pursuit](https://ieeexplore.ieee.org/document/6640713)," Proceedings of the 32nd Chinese Control Conference, Xi'an, 2013, pp. 7252-7256.
+   Xu Fang, [Chen Wang](https://wang-chen.github.io), [Lihua Xie](https://www.ntu.edu.sg/home/elhxie/), [Jie Chen](https://baike.baidu.com/item/%E9%99%88%E6%9D%B0/3890094), "Cooperative Pursuit with Multi-Pursuer and One Faster Free-moving Evader", IEEE Transactions on Cybernetics, 2020.
