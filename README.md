@@ -4,7 +4,7 @@ A ROS package for multi-agent formation/rendezvous
 
 ### Acknowledgement
 
-   Xu Fang, [Chen Wang](https://wang-chen.github.io), [Lihua Xie](https://www.ntu.edu.sg/home/elhxie/), [Jie Chen](https://baike.baidu.com/item/%E9%99%88%E6%9D%B0/3890094), "Cooperative Pursuit with Multi-Pursuer and One Faster Free-moving Evader", IEEE Transactions on Cybernetics, 2020.
+   [Xu Fang](https://scholar.google.com/citations?user=w8vxb4gAAAAJ&hl=en), [Chen Wang](https://wang-chen.github.io), [Lihua Xie](https://www.ntu.edu.sg/home/elhxie/), [Jie Chen](https://baike.baidu.com/item/%E9%99%88%E6%9D%B0/3890094), "Cooperative Pursuit with Multi-Pursuer and One Faster Free-moving Evader", IEEE Transactions on Cybernetics, 2020.
 
 
 ## Install Dependencies
@@ -21,7 +21,7 @@ A ROS package for multi-agent formation/rendezvous
 
       https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor
 
-## Run
+## Compile (catkin_make) then Run
       roslaunch formation multiquadcopters.launch
 
 # The simulation for formation control (click to watch video):
@@ -31,3 +31,13 @@ A ROS package for multi-agent formation/rendezvous
 # The simulation for rendezvous control (pursuit):
 
    [<img src="https://img.youtube.com/vi/-UGwG7mGVNw/maxresdefault.jpg" width="100%">](https://youtu.be/-UGwG7mGVNw)
+
+# Please consider cite:
+
+      @article{fang2020cooperative,
+        title={Cooperative pursuit with multi-pursuer and one faster free-moving evader},
+        author={Fang, Xu and Wang, Chen and Xie, Lihua and Chen, Jie},
+        journal={IEEE transactions on cybernetics},
+        year={2020},
+        publisher={IEEE}
+      }
