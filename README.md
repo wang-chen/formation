@@ -9,7 +9,7 @@ A ROS package for multi-agent formation/rendezvous
 
 ## Install Dependencies
 
-   ** Only Ubuntu 16 (ROS Kinetic) is supported
+   Only **Ubuntu 16 (ROS Kinetic)** is supported.
 
       sudo apt install python-tk
       sudo apt install ros-kinetic-hector-*
@@ -24,23 +24,10 @@ A ROS package for multi-agent formation/rendezvous
 ## Run
       roslaunch formation multiquadcopters.launch
 
-
-# The simulation for formation control:
+# The simulation for formation control (click to watch video):
      
    [<img src="https://img.youtube.com/vi/TrHX4kf0_jU/maxresdefault.jpg" width="100%">](https://youtu.be/TrHX4kf0_jU)
 
 # The simulation for rendezvous control (pursuit):
 
    [<img src="https://img.youtube.com/vi/-UGwG7mGVNw/maxresdefault.jpg" width="100%">](https://youtu.be/-UGwG7mGVNw)
-
-
-
-
-
-
-
-
-
-
-
-docker run -it -v /home/jeff/kinetic_ws:/home/kinetic_ws --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" chenwang/ros-kinetic-desktop-full bash
